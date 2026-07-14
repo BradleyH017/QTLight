@@ -106,8 +106,9 @@ def main():
     agg_columns = agg_columns.split(",")
     if len(agg_columns)>1:
         for f1 in agg_columns:
-            if re.sub(r'\W+', '_', f1.replace(' ', '_')) in h5ad.split("__")[0]:
+            if re.sub(r'\W+', '_', f1.replace(' ', '_')) == h5ad.split("__")[0]:
                 agg_columns = [f1]
+                break
              
     gt_id_column =  options.gt_id_column
     sample_column = options.sample_column

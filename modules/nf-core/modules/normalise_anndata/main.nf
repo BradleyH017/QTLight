@@ -8,9 +8,12 @@ process NORMALISE_ANNDATA {
     }else{
         memory { 
             sizeInGB = adata.size() / 1e9 
-            return (sizeInGB * 6 * task.attempt).toString() + 'GB' 
+            return (sizeInGB * 2 * task.attempt).toString() + 'GB' 
         }
     }
+
+    time = { 48.h }
+    queue = { 'long' }
 
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "${params.eqtl_container}"

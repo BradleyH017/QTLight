@@ -117,7 +117,10 @@ workflow EQTL {
         
         if (params.split_aggregation_adata){
             // pheno.subscribe { println "pheno: $it" }
-            SPLIT_AGGREGATION_ADATA(pheno,params.aggregation_columns)
+            // parallelise split aggregation adata
+            agg_cols_ch = Channel.from(params.aggregation_columns.split(','))
+            pheno_val = (pheno instanceof java.nio.file.Path || pheno instanceof String) ? Channel.value(pheno) : pheno.first()
+            SPLIT_AGGREGATION_ADATA(pheno_val, agg_cols_ch)
             adata = SPLIT_AGGREGATION_ADATA.out.split_phenotypes.flatten()
         }else{
             adata = pheno
@@ -331,7 +334,7 @@ workflow EQTL {
                 saige_genotype_phenotype_mapping_file = Channel.fromPath(params.genotype_phenotype_mapping_file, followLinks: true, checkIfExists: true)
             }
 
-            SAIGE_qtls(genotype_pcs_file,adata,bim_bed_fam,genome_annotation,saige_genotype_phenotype_mapping_file)
+            // SAIGE_qtls(genotype_pcs_file,adata,bim_bed_fam,genome_annotation,saige_genotype_phenotype_mapping_file)
         }
     }
 

@@ -1,0 +1,560 @@
+May-10 19:08:58.565 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight -profile sanger -resume -c /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/sample_input/input_multi_tissue_IBDv_v2.nf
+May-10 19:08:58.839 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+May-10 19:08:58.878 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+May-10 19:08:58.907 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-10 19:08:58.913 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-10 19:08:58.917 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-10 19:08:58.959 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-10 19:09:01.318 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/nextflow.config
+May-10 19:09:01.329 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/sample_input/input_multi_tissue_IBDv_v2.nf
+May-10 19:09:01.330 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/nextflow.config
+May-10 19:09:01.330 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/sample_input/input_multi_tissue_IBDv_v2.nf
+May-10 19:09:01.346 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `sanger`
+May-10 19:09:04.867 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `sanger`
+May-10 19:09:04.916 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, test_scrna, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, iris, tes, scw, unc_longleaf, tigem, tubingen_apg, apollo, ipop_up, vsc_calcua, pdc_kth, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, test_bulk, medair, biowulf, mahuika, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, purdue_gautschi, pawsey_nimbus, rki, ucl_myriad, utd_ganymede, charliecloud, fred_hutch, seattlechildrens, icr_davros, ceres, purdue_negishi, munin, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, lrz_cm4, purdue_bell, biohpc_gen, shifter, mana, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, marjorie, computerome, ucd_sonic, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, imb, ucl_cscluster, tuos_stanage, azurebatch, seadragon, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, conda, crg, singularity, mpcdf_viper, dirac, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, hki_genie, debug, genouest, cbe, unsw_katana, utd_juno, phoenix, seawulf, uod_hpc, fub_curta, lovelace, uct_hpc, aws_tower, fsu_draco]
+May-10 19:09:05.010 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+May-10 19:09:05.063 [main] INFO  nextflow.cli.CmdRun - Launching `/lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/main.nf` [cheeky_mahavira] DSL2 - revision: b0ebecfdf6
+May-10 19:09:05.072 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-10 19:09:05.073 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-10 19:09:05.085 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/secrets/store.json
+May-10 19:09:05.087 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@34aa8b61] - activable => nextflow.secret.LocalSecretsProvider@34aa8b61
+May-10 19:09:05.201 [main] DEBUG nextflow.Session - Session UUID: 171570a6-7a0b-418b-add9-ccb874c209cc
+May-10 19:09:05.202 [main] DEBUG nextflow.Session - Run name: cheeky_mahavira
+May-10 19:09:05.202 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-10 19:09:05.212 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+May-10 19:09:05.215 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+May-10 19:09:05.298 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (16:07 BST)
+  System: Linux 5.15.0-164-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.8.1+1
+  Encoding: UTF-8 (UTF-8)
+  Process: 2716382@node-14-25 [10.160.64.62]
+  CPUs: 1 - Mem: 2 TB (734.6 GB) - Swap: 67.4 GB (67.1 GB)
+May-10 19:09:05.424 [main] DEBUG nextflow.Session - Work-dir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work [lustre]
+May-10 19:09:05.482 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-10 19:09:05.509 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-10 19:09:05.633 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-10 19:09:05.657 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+May-10 19:09:06.051 [main] DEBUG nextflow.Session - Session start
+May-10 19:09:06.056 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/results/pipeline_info/execution_trace_2026-05-10_19-09-04.txt
+May-10 19:09:06.258 [main] DEBUG nextflow.Session - Using default localLib path: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/lib
+May-10 19:09:06.275 [main] DEBUG nextflow.Session - Adding to the classpath library: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/lib
+May-10 19:09:06.276 [main] DEBUG nextflow.Session - Adding to the classpath library: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/lib/nfcore_external_java_deps.jar
+May-10 19:09:08.430 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-10 19:09:19.076 [main] INFO  nextflow.Nextflow - Lets run eQTL mapping
+May-10 19:09:19.078 [main] INFO  nextflow.Nextflow - ------ Scrna analysis ------
+May-10 19:09:19.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_EQTL:EQTL:NORMALISE_ANNDATA
+May-10 19:09:19.227 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.227 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.243 [main] DEBUG nextflow.executor.Executor - [warm up] executor > lsf
+May-10 19:09:19.250 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'lsf' > capacity: 700; pollInterval: 5s; dumpInterval: 5m 
+May-10 19:09:19.256 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: lsf)
+May-10 19:09:19.256 [main] DEBUG n.processor.TaskPollingMonitor - Creating submit rate limit of 5 submissions per 1 seconds
+May-10 19:09:19.272 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'lsf' > queue-stat-interval: 1m
+May-10 19:09:19.281 [main] DEBUG nextflow.executor.LsfExecutor - [LSF] Detected lsf.conf LSF_UNIT_FOR_LIMITS=MB
+May-10 19:09:19.356 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [0]
+May-10 19:09:19.419 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.419 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.490 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.490 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.508 [main] INFO  nextflow.Nextflow - ------- Analysing all celltypes ------- 
+May-10 19:09:19.635 [main] INFO  nextflow.Nextflow - Lets preprocess genotypes
+May-10 19:09:19.645 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:PREPROCESS_GENOTYPES
+May-10 19:09:19.646 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.647 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.661 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:PLINK_CONVERT
+May-10 19:09:19.661 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.662 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.666 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:PGEN_CONVERT
+May-10 19:09:19.667 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.667 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.680 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:GENOTYPE_PC_CALCULATION
+May-10 19:09:19.680 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.680 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.700 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:NORMALISE_and_PCA_PHENOTYPE
+May-10 19:09:19.701 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.701 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.748 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:SUBSET_PCS
+May-10 19:09:19.749 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.749 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.767 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:PREPERE_EXP_BED
+May-10 19:09:19.788 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.788 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.789 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [1, 2]
+May-10 19:09:19.798 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL
+May-10 19:09:19.798 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:TENSORQTL` matches process NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL
+May-10 19:09:19.808 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.808 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.809 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [1]
+May-10 19:09:19.817 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_EQTL:EQTL:TENSORQTL_eqtls:PREP_OPTIMISE_PCS
+May-10 19:09:19.818 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.818 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.837 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_EQTL:EQTL:TENSORQTL_eqtls:OPTIMISE_PCS
+May-10 19:09:19.838 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.839 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.850 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM
+May-10 19:09:19.850 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:TENSORQTL` matches process NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM
+May-10 19:09:19.851 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: lsf
+May-10 19:09:19.859 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'lsf'
+May-10 19:09:19.860 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [1]
+May-10 19:09:19.863 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NFCORE_EQTL:EQTL:NORMALISE_and_PCA_PHENOTYPE, CHUNK_GENES, SPLIT_AGGREGATION_ADATA, MULTIPLE_TESTING_CORRECTION, CONDITIONAL_QTL, AGGREGATE_ACAT_RESULTS, NORMALISE_ANNDATA, NFCORE_EQTL:EQTL:TENSORQTL_eqtls:PREP_OPTIMISE_PCS, SAIGE_QVAL_COR, SPLIT_PHENOTYPE_DATA, NFCORE_EQTL:EQTL:GENOTYPE_PC_CALCULATION, TRANS_OF_CIS, NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA, PREP_OPTIMISE_PCS, SAIGE_S2_CIS, REMAP_GENOTPE_ID, PGEN_CONVERT, NFCORE_EQTL:EQTL:PREPROCESS_GENOTYPES, PREPERE_EXP_BED, CHUNK_GENOME, AGGREGATE_QTL_ALLVARS, SUBSET_GENOTYPE, NFCORE_EQTL:EQTL:NORMALISE_ANNDATA, NORMALISE_and_PCA_PHENOTYPE, NFCORE_EQTL:EQTL:PREPERE_EXP_BED, PREPROCESS_SAMPLE_MAPPING, TEST, AGGREGATE_QTL_RESULTS, COLLECT_RESULTS, NFCORE_EQTL:EQTL:SUBSET_PCS, H5AD_TO_SAIGE_FORMAT, NFCORE_EQTL:EQTL:PGEN_CONVERT, ORGANISE_AGGREGATED_FILES, PREPROCESS_GENOTYPES, DETERMINE_TSS_AND_TEST_REGIONS, LIMIX, RUN_GSEA, AGGREGATE_UMI_COUNTS, KINSHIP_CALCULATION, NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM, PHENOTYPE_PCs, CREATE_SPARSE_GRM, NFCORE_EQTL:EQTL:TENSORQTL_eqtls:OPTIMISE_PCS, OPTIMISE_PCS, SUBSET_PCS, NFCORE_EQTL:EQTL:PLINK_CONVERT, NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL, TENSORQTL_OPTIM, GENOTYPE_PC_CALCULATION, BGEN_CONVERT, TRANS_BY_CIS, SPLIT_INTERACTIONS, SAIGE_S1, NFCORE_EQTL:EQTL:AGGREGATE_UMI_COUNTS, SAIGE_S3, PLINK_CONVERT, TENSORQTL
+May-10 19:09:19.866 [main] DEBUG nextflow.Session - Igniting dataflow network (23)
+May-10 19:09:19.866 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:NORMALISE_ANNDATA
+May-10 19:09:19.866 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:NORMALISE_ANNDATA
+May-10 19:09:19.866 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA
+May-10 19:09:19.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:AGGREGATE_UMI_COUNTS
+May-10 19:09:19.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:PREPROCESS_GENOTYPES
+May-10 19:09:19.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:PLINK_CONVERT
+May-10 19:09:19.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:PGEN_CONVERT
+May-10 19:09:19.881 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:GENOTYPE_PC_CALCULATION
+May-10 19:09:19.881 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:NORMALISE_and_PCA_PHENOTYPE
+May-10 19:09:19.887 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:SUBSET_PCS
+May-10 19:09:19.888 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:PREPERE_EXP_BED
+May-10 19:09:19.888 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:PREPERE_EXP_BED
+May-10 19:09:19.897 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL
+May-10 19:09:19.898 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL
+May-10 19:09:19.898 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:PREP_OPTIMISE_PCS
+May-10 19:09:19.899 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:OPTIMISE_PCS
+May-10 19:09:19.899 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM
+May-10 19:09:19.899 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM
+May-10 19:09:19.899 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_a2a41103d3d6acc0: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/split_phenotype_data/main.nf
+  Script_ccd4f6f3a5e4bc10: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/normalise_and_pca/main.nf
+  Script_9728f1cc60172b3a: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/normalise_anndata/main.nf
+  Script_187cbf41d3d4bc3d: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/aggregate_UMI_counts/main.nf
+  Script_1207f5452035a770: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/eqtl.nf
+  Script_e769b2326c850ea8: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/preprocess_sample_mapping/main.nf
+  Script_e52aa20c3e983f0c: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/limix/main.nf
+  Script_436d0e523631ffcf: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/tensorqtl/main.nf
+  Script_39f7da9d695feff7: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/subset_genotype/main.nf
+  Script_20046cb56e8f451e: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/main.nf
+  Script_4d3c6eff922dd7b8: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/preprocess_genotypes/main.nf
+  Script_df3198f965864c57: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/plink_convert/main.nf
+  Script_f338a125ddf2bf3c: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/tensorqtl/./processes.nf
+  Script_ea176aa5b9e9e15c: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/prepere_exp_bed/main.nf
+  Script_8c75eeec3f554fc6: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/covar_processing/main.nf
+  Script_ee08cd8dde248273: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/modules/nf-core/modules/kinship_calculation/main.nf
+  Script_56a003260e30ef69: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/genotype_pc_calculation/main.nf
+  Script_c0195a262ab4e1ab: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/./workflows/../modules/nf-core/modules/saige/main.nf
+May-10 19:09:19.900 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-10 19:09:19.900 [main] DEBUG nextflow.Session - Session await
+May-10 19:09:19.991 [Actor Thread 4] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://yascp.cog.sanger.ac.uk/public/singularity_images/eqtl_29_11_2024.sif; path=/lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/singularity/yascp.cog.sanger.ac.uk-public-singularity_images-eqtl_29_11_2024.sif
+May-10 19:09:20.186 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [ba/f9468b] Cached process > NFCORE_EQTL:EQTL:PREPROCESS_GENOTYPES (1)
+May-10 19:09:20.198 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [04/7cc901] Cached process > NFCORE_EQTL:EQTL:NORMALISE_ANNDATA (1)
+May-10 19:09:20.311 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [40/c6ce87] Cached process > NFCORE_EQTL:EQTL:PGEN_CONVERT (1)
+May-10 19:09:20.326 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [2e/c677bb] Cached process > NFCORE_EQTL:EQTL:PLINK_CONVERT (1)
+May-10 19:09:20.397 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [16/90c109] Cached process > NFCORE_EQTL:EQTL:GENOTYPE_PC_CALCULATION (null.null)
+May-10 19:09:21.464 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [LSF] submitted process NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1) > jobId: 910428; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1
+May-10 19:09:21.464 [Task submitter] INFO  nextflow.Session - [98/db9eb0] Submitted process > NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1)
+May-10 19:14:24.275 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:19:24.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:24:24.292 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:29:24.300 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:34:24.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:39:24.320 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:44:24.329 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:49:24.333 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:54:24.338 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 19:59:24.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:04:24.350 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:09:24.357 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:14:24.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:19:24.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:24:24.382 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:29:24.388 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:34:24.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:39:24.404 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:44:24.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:49:24.410 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:54:24.445 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 20:59:24.456 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:04:24.475 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:09:24.483 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:14:24.489 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:19:24.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:24:24.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:29:24.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:34:24.513 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:39:24.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:44:24.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:49:24.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:54:24.555 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 21:59:24.568 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:04:24.579 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:09:24.588 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:14:24.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:19:24.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:24:24.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:29:24.628 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:34:24.634 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:39:24.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:44:24.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:49:24.669 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:54:24.678 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 22:59:24.686 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:04:24.692 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:09:24.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:14:24.705 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:19:24.712 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:24:24.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:29:24.730 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:34:24.751 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:39:24.765 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:44:24.789 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:49:24.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:54:24.807 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-10 23:59:24.818 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:04:24.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:09:24.853 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:14:24.857 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:19:24.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:24:24.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:29:24.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:34:24.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:39:24.891 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:44:24.899 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:49:24.900 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:54:24.907 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 00:59:24.911 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:04:24.916 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:09:24.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:14:24.932 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:19:24.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:24:24.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:29:24.963 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:34:24.967 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:39:24.974 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:44:25.000 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:49:25.002 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:54:25.011 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 01:59:25.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:04:25.026 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:09:25.028 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:14:25.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:19:25.041 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:24:25.046 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:29:25.053 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:34:25.060 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:39:25.078 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:44:25.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:49:25.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:54:25.096 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 02:59:25.103 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:04:25.112 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:09:25.121 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:14:25.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:19:25.147 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:24:25.152 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:29:25.160 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:34:25.167 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:39:25.173 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:44:25.183 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:49:25.189 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:54:25.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 03:59:25.202 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:04:25.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:09:25.213 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:14:25.243 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:19:25.249 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:24:25.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:29:25.262 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:34:25.267 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:39:25.276 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:44:25.283 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:49:25.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:54:25.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 04:59:25.299 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:04:25.308 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:09:25.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:14:25.326 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:19:25.332 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:24:25.340 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:29:25.346 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:34:25.356 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:39:25.366 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:44:25.374 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:49:25.380 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:54:25.387 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 05:59:25.392 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:04:25.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:09:25.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:14:25.415 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:19:25.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:24:25.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:29:25.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:34:25.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:39:25.447 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:44:25.452 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:49:25.459 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:54:25.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 06:59:25.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:04:25.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:09:25.480 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:14:25.488 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:19:25.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:24:25.501 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:29:25.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:34:25.516 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:39:25.521 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:44:25.528 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:49:25.533 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:54:25.541 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 07:59:25.549 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:04:25.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:09:25.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:14:25.582 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:19:25.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:24:25.591 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:29:25.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:34:25.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:39:25.709 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:44:25.719 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:49:25.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:54:25.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:59:25.744 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor lsf > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[jobId: 910428; id: 5; name: NFCORE_EQTL:EQTL:SPLIT_AGGREGATION_ADATA (1); status: RUNNING; exit: -; error: -; workDir: /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/work/98/db9eb0131fd8d3b43b069f5323ccd1 started: 1778436799276; exited: -; ]
+May-11 08:59:32.691 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+May-11 08:59:32.789 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] NFCORE_EQTL:EQTL:AGGREGATE_UMI_COUNTS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: adata
+  port 1: (value) bound ; channel: agg_columns
+  port 2: (value) bound ; channel: gt_id_column
+  port 3: (value) bound ; channel: sample_column
+  port 4: (value) bound ; channel: n_cells_min
+  port 5: (value) bound ; channel: n_donors_min
+  port 6: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:NORMALISE_and_PCA_PHENOTYPE
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:SUBSET_PCS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:PREPERE_EXP_BED
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: __$eachinparam<1>
+  port 2: (value) bound ; channel: __$eachinparam<2>
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: __$eachinparam<1>
+  port 2: (value) bound ; channel: skip_nominal
+  port 3: (value) bound ; channel: preprocess_bed
+  port 4: (value) bound ; channel: skip_gwas
+  port 5: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:TENSORQTL_eqtls:PREP_OPTIMISE_PCS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:TENSORQTL_eqtls:OPTIMISE_PCS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_EQTL:EQTL:TENSORQTL_eqtls:TENSORQTL_OPTIM
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: __$eachinparam<1>
+  port 2: (value) bound ; channel: skip_nominal
+  port 3: (value) bound ; channel: preprocess_bed
+  port 4: (value) bound ; channel: skip_gwas
+  port 5: (cntrl) -     ; channel: $
+
+May-11 08:59:32.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: lsf) - terminating tasks monitor poll loop
+May-11 08:59:32.800 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-11 08:59:32.800 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-11 08:59:32.810 [main] INFO  nextflow.Nextflow - Pipeline completed at: 2026-05-11T08:59:32.801053095+01:00
+May-11 08:59:32.811 [main] INFO  nextflow.Nextflow - Command line: nextflow run /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight -profile sanger -resume -c /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/sample_input/input_multi_tissue_IBDv_v2.nf
+May-11 08:59:32.811 [main] INFO  nextflow.Nextflow - Execution status: failed
+May-11 08:59:32.831 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/eqtl][0;31m Pipeline completed with errors[0m-
+May-11 08:59:32.831 [main] INFO  nextflow.Nextflow - Pipeline completed at: 2026-05-11T08:59:32.801053095+01:00
+May-11 08:59:32.831 [main] INFO  nextflow.Nextflow - Command line: nextflow run /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight -profile sanger -resume -c /lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight/sample_input/input_multi_tissue_IBDv_v2.nf
+May-11 08:59:32.832 [main] INFO  nextflow.Nextflow - Execution status: failed
+May-11 08:59:32.832 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/eqtl][0;31m Pipeline completed with errors[0m-
+May-11 08:59:32.838 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+May-11 08:59:33.001 [main] DEBUG n.executor.AbstractGridExecutor - Unable to kill pending jobs
+- cmd executed: bkill 910428
+- exit status : 130
+- output      :
+
+May-11 08:59:33.002 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=5; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=0ms; cachedDuration=13h 7m 11s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=320.2 GB; ]
+May-11 08:59:33.002 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+May-11 08:59:33.009 [SIGINT handler] INFO  nextflow.Session - Adieu
+May-11 08:59:33.122 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+May-11 08:59:33.182 [SIGINT handler] INFO  nextflow.Session - Adieu

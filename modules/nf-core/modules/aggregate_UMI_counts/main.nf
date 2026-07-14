@@ -1,9 +1,11 @@
 process SPLIT_AGGREGATION_ADATA {
     // label 'process_medium'
-    memory { 
-            sizeInGB = adata.size() / 1e9 * 0.5 * task.attempt
-            return (sizeInGB ).toString() + 'GB' 
+    memory {
+            sizeInGB = adata.size() / 1e9 * task.attempt
+            return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
         }
+    time = { 48.h }
+    queue = { 'long' }
       
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "${params.eqtl_container}"
@@ -41,9 +43,9 @@ process ORGANISE_AGGREGATED_FILES{
     } else {
         container "${params.eqtl_docker}"
     }
-    memory { 
+    memory {
             sizeInGB = adata.size() / 1e9 * 0.3 * task.attempt
-            return (sizeInGB ).toString() + 'GB' 
+            return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
         }
   input:
     tuple val(sanitized_columns), path(phenotype_files),  path(genotype_phenotype_mapping)
@@ -64,17 +66,21 @@ process ORGANISE_AGGREGATED_FILES{
 process AGGREGATE_UMI_COUNTS {
   publishDir  path: "${params.outdir}/aggregated_counts/${sanitized_columns}",mode: "${params.copy_mode}",
               overwrite: "true"
-    label 'process_medium'
+    // label 'process_medium'
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "${params.eqtl_container}"
         
     } else {
         container "${params.eqtl_docker}"
     }
-    memory { 
-            sizeInGB = adata.size() / 1e9 * 0.3 * task.attempt
-            return (sizeInGB ).toString() + 'GB' 
+    memory {
+            sizeInGB = adata.size() / 1e9 * 0.7 * task.attempt
+            return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
         }
+
+    time = { 48.h }
+    queue = { 'long' }
+
   input:
     path(adata) // lists input files per donor
     val(agg_columns)

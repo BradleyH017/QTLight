@@ -317,7 +317,7 @@ workflow TENSORQTL_eqtls{
           // TENSORQTL.out.pc_qtls_path.view()
           // Make sure all input files are available before running the optimisation
           // Fix the format of the output from TENSORQTL
-          prep_optim_pc_channel = TENSORQTL.out.pc_qtls_path.groupTuple(by: [0,1]).map { key1, key2, values -> [key1, key2, values.flatten()]}
+          prep_optim_pc_channel = TENSORQTL.out.pc_qtls_path.groupTuple(by: [0,1], size: params.covariates.nr_phenotype_pcs.split(',').size(), remainder: true).map { key1, key2, values -> [key1, key2, values.flatten()]}
           // Create symlinks to the output files
           PREP_OPTIMISE_PCS(prep_optim_pc_channel)
           // Run the optimisation to get the eQTL output with the most eGenes

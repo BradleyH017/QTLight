@@ -1,11 +1,11 @@
 process SPLIT_AGGREGATION_ADATA {
-    // label 'process_medium'
-    memory {
-            sizeInGB = adata.size() / 1e9 * task.attempt
-            return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
-        }
-    time = { 48.h }
-    queue = { 'long' }
+    label 'process_medium'
+    // memory {
+    //        sizeInGB = 3 * adata.size() / 1e9 * task.attempt
+    //        return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
+    //    }
+    //time = { 48.h }
+    //queue = { 'long' }
       
     if (workflow.containerEngine == 'singularity' && !params.singularity_pull_docker_container) {
         container "${params.eqtl_container}"
@@ -74,8 +74,9 @@ process AGGREGATE_UMI_COUNTS {
         container "${params.eqtl_docker}"
     }
     memory {
-            sizeInGB = adata.size() / 1e9 * 0.7 * task.attempt
-            return (Math.max(sizeInGB.toDouble(), 5.0)).toString() + 'GB'
+            baseGB = Math.max(adata.size() / 1e9 * 2, 20.0)
+            sizeInGB = baseGB * Math.pow(2, task.attempt - 1)
+            return sizeInGB.toString() + 'GB'
         }
 
     time = { 48.h }

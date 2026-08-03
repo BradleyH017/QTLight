@@ -179,7 +179,7 @@ def main():
                     phenotype_pos_df.loc[phenotype_df1],
                     covariates_df=covariates_df.loc[phenotype_df.columns],prefix='cis_inter1',
                     maf_threshold=interaction_maf, maf_threshold_interaction=interaction_maf, output_dir=outdir, write_top=True, write_stats=map_nominal,
-                    interaction_df=interaction_df,
+                    interaction_df=interaction_df.loc[phenotype_df.columns],
                     run_eigenmt=True)
     
     all_files = glob.glob(f'{outdir}/cis_inter*.parquet')

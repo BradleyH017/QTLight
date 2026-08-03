@@ -9,8 +9,8 @@
 
 # TODO: User edit this section to fit workstation
 # export NF_PATH="/software/hgi/installs/anaconda3/envs/nextflow/bin/"
-export EQTL_REPO="/lustre/scratch126/humgen/teams_v2/anderson/rh33/IBDverse_eqtl_fr002/QTLightv1-replicate/QTLight"
-export INPUT="${EQTL_REPO}/sample_input/input_multi_tissue_IBDv_v2.nf"
+export EQTL_REPO="/lustre/scratch125/humgen/projects_v2/ibdresponse/analysis/bradley_analysis/eQTL_mapping/QTLight"
+export INPUT="${EQTL_REPO}/sample_input/input_IBD-R.nf"
 
 # Add Singularity to path
 # PATH=$PATH:/software/singularity/v3.10.0/bin

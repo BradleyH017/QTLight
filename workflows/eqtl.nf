@@ -52,22 +52,22 @@ multiqc_options.args += params.multiqc_title ? Utils.joinModuleArgs(["--title \"
 // MODULE: Installed directly from nf-core/modules
 //
 // include { FASTQC  } from '../modules/nf-core/modules/fastqc/main'  addParams( options: modules['fastqc'] )
-include {PREPROCESS_GENOTYPES} from '../modules/nf-core/modules/preprocess_genotypes/main' 
-include {PLINK_CONVERT;PGEN_CONVERT;BGEN_CONVERT} from '../modules/nf-core/modules/plink_convert/main' 
-include {SUBSET_GENOTYPE} from '../modules/nf-core/modules/subset_genotype/main' 
-include {GENOTYPE_PC_CALCULATION} from '../modules/nf-core/modules/genotype_pc_calculation/main' 
-include {SPLIT_PHENOTYPE_DATA} from '../modules/nf-core/modules/split_phenotype_data/main' 
-include {NORMALISE_and_PCA_PHENOTYPE} from '../modules/nf-core/modules/normalise_and_pca/main' 
-include {LIMIX_eqtls} from '../modules/nf-core/modules/limix/main'
-include {PREPROCESS_SAMPLE_MAPPING} from '../modules/nf-core/modules/preprocess_sample_mapping/main'
-include {NORMALISE_ANNDATA; REMAP_GENOTPE_ID} from '../modules/nf-core/modules/normalise_anndata/main'
-include {AGGREGATE_UMI_COUNTS; SPLIT_AGGREGATION_ADATA; ORGANISE_AGGREGATED_FILES} from '../modules/nf-core/modules/aggregate_UMI_counts/main'
-include {PREPERE_EXP_BED} from '../modules/nf-core/modules/prepere_exp_bed/main'
-include {TENSORQTL_eqtls} from '../modules/nf-core/modules/tensorqtl/main'
-include {H5AD_TO_SAIGE_FORMAT} from '../modules/nf-core/modules/saige/main'
-include {SAIGE_qtls} from '../modules/nf-core/modules/saige/main'
-include {SUBSET_PCS} from '../modules/nf-core/modules/covar_processing/main'
-include {KINSHIP_CALCULATION} from "$projectDir/modules/nf-core/modules/kinship_calculation/main"
+include {PREPROCESS_GENOTYPES} from "${projectDir}/modules/nf-core/modules/preprocess_genotypes/main"
+include {PLINK_CONVERT;PGEN_CONVERT;BGEN_CONVERT} from "${projectDir}/modules/nf-core/modules/plink_convert/main" 
+include {SUBSET_GENOTYPE} from "${projectDir}/modules/nf-core/modules/subset_genotype/main" 
+include {GENOTYPE_PC_CALCULATION} from "${projectDir}/modules/nf-core/modules/genotype_pc_calculation/main" 
+include {SPLIT_PHENOTYPE_DATA} from "${projectDir}/modules/nf-core/modules/split_phenotype_data/main" 
+include {NORMALISE_and_PCA_PHENOTYPE} from "${projectDir}/modules/nf-core/modules/normalise_and_pca/main" 
+include {LIMIX_eqtls} from "${projectDir}/modules/nf-core/modules/limix/main"
+include {PREPROCESS_SAMPLE_MAPPING} from "${projectDir}/modules/nf-core/modules/preprocess_sample_mapping/main"
+include {NORMALISE_ANNDATA; REMAP_GENOTPE_ID} from "${projectDir}/modules/nf-core/modules/normalise_anndata/main"
+include {AGGREGATE_UMI_COUNTS; SPLIT_AGGREGATION_ADATA; ORGANISE_AGGREGATED_FILES} from "${projectDir}/modules/nf-core/modules/aggregate_UMI_counts/main"
+include {PREPERE_EXP_BED} from "${projectDir}/modules/nf-core/modules/prepere_exp_bed/main"
+include {TENSORQTL_eqtls} from "${projectDir}/modules/nf-core/modules/tensorqtl/main"
+include {H5AD_TO_SAIGE_FORMAT} from "${projectDir}/modules/nf-core/modules/saige/main"
+include {SAIGE_qtls} from "${projectDir}/modules/nf-core/modules/saige/main"
+include {SUBSET_PCS} from "${projectDir}/modules/nf-core/modules/covar_processing/main"
+include {KINSHIP_CALCULATION} from "${projectDir}/modules/nf-core/modules/kinship_calculation/main"
 
 // include {OPTIMISE_PCS} from '../modules/nf-core/modules/optimise_pcs/main'
 /*

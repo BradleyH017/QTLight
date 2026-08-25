@@ -80,7 +80,9 @@ process AGGREGATE_UMI_COUNTS {
         }
 
     time = { 48.h }
-    queue = { 'long' }
+    queue = { task.attempt > 3 ? 'hugemem' : 'long' }
+    maxRetries = 6
+    errorStrategy { task.attempt <= 6 ? 'retry' : 'ignore' }
 
   input:
     path(adata) // lists input files per donor

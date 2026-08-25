@@ -47,6 +47,7 @@ mkdir $NXF_TEMP
 nextflow run ${EQTL_REPO} \
 -profile sanger \
 -resume \
+-c ${EQTL_REPO}/nextflow.config \
 -c ${INPUT}
 
 # Run in a week queue

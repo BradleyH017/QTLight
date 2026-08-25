@@ -116,7 +116,7 @@ process PGEN_CONVERT{
 
         """
             mkdir plink_genotypes_bgen
-            plink2 ${ext1} --max-alleles 2 --make-pgen ${params.plink2_filters} --hwe ${params.hwe} --out plink_genotypes_bgen/plink_genotypes
+            plink2 ${ext1} --max-alleles 2 --set-all-var-ids '@:#:\$r:\$a' --new-id-max-allele-len 1000 --make-pgen ${params.plink2_filters} --hwe ${params.hwe} --out plink_genotypes_bgen/plink_genotypes
         """
     
     

@@ -34,12 +34,18 @@ params.fasta = WorkflowMain.getGenomeAttribute(params, 'fasta')
 */
 
 include { EQTL } from './workflows/eqtl'
+include { CCQTL } from './workflows/ccqtl'
 
 //
 // WORKFLOW: Run main nf-core/eqtl analysis pipeline
 //
 workflow NFCORE_EQTL {
-    EQTL ()
+    // params.mode: 'eqtl' (default) or 'ccqtl' (cell-type composition QTLs, workflows/ccqtl.nf)
+    if (params.mode == 'ccqtl') {
+        CCQTL ()
+    } else {
+        EQTL ()
+    }
 }
 
 /*

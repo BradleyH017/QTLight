@@ -3,7 +3,7 @@
 Summarise a ccQTL run from the per-chromosome outputs of ccqtl_map.py.
 
 Inputs (--stats-dir / --perm-dir): <analysis>__chr<c>.{hist.tsv,thin.tsv.gz,lookup.tsv}
-and <analysis>__chr<c>.{perm_stats.tsv,perm_hist.tsv}.
+and <analysis>__chr<c>[__perm<a>-<b>].{perm_stats.tsv,perm_hist.tsv} (split permutation jobs are pooled).
 
 Outputs (--outdir):
   lambda.tsv                     genome-wide lambda + n tests per analysis x cell type

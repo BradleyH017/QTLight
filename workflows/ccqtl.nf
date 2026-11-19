@@ -43,7 +43,7 @@ workflow CCQTL {
     log.info "cc_within           : ${within.join(', ')}"
     log.info "covariates          : genotype PCs (${params.covariates.nr_genotype_pcs}), ${params.ccQTL.covariates ?: '-'}${params.ccQTL.include_log10_n_cells ? ', log10_n_cells' : ''}"
     log.info "RINT_composition    : ${params.ccQTL.RINT_composition}"
-    log.info "chromosomes         : ${chromosomes.join(',')}; permutations: ${params.ccQTL.n_permutations} on ${perm_chromosomes.join(',') ?: '-'}"
+    log.info "chromosomes         : ${chromosomes.join(',')}; permutations: ${params.ccQTL.n_permutations} on ${perm_chromosomes.join(',') ?: '-'} in ${params.ccQTL.permutation_jobs ?: 1} jobs per chromosome"
 
     // ---------------- Genotypes (as in the eQTL workflow)
     if (params.genotypes.preprocessed_pgen_file == '') {
@@ -79,7 +79,16 @@ workflow CCQTL {
     // ---------------- Association (one job per chromosome) and permutations
     CCQTL_MAP(analysis_files, plink_path, chromosomes)
     if (perm_chromosomes) {
-        CCQTL_PERMUTE(analysis_files, plink_path, perm_chromosomes)
+        // Split the permutations of each chromosome into ccQTL.permutation_jobs blocks of consecutive
+        // permutation numbers (each permutation has its own seed, so the split does not change the results)
+        n_perm = params.ccQTL.n_permutations as int
+        n_jobs = Math.max(1, Math.min((params.ccQTL.permutation_jobs ?: 1) as int, n_perm))
+        block = (int) Math.ceil(n_perm / (double) n_jobs)
+        perm_jobs = []
+        perm_chromosomes.each { c ->
+            for (int s = 1; s <= n_perm; s += block) perm_jobs << [c, s, Math.min(block, n_perm - s + 1)]
+        }
+        CCQTL_PERMUTE(analysis_files, plink_path, perm_jobs)
         perm_files = CCQTL_PERMUTE.out.perm.flatten().collect()
     } else {
         perm_files = Channel.value([])

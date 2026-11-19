@@ -102,8 +102,9 @@ process CCQTL_MAP {
 
 
 process CCQTL_PERMUTE {
-    // Calibration: rescan one chromosome with permuted (residualised) phenotypes
-    tag "chr${chrom}, ${params.ccQTL.n_permutations} permutations"
+    // Calibration: rescan one chromosome with permuted (residualised) phenotypes.
+    // One job per chromosome x block of permutations (ccQTL.permutation_jobs blocks)
+    tag "chr${perm_job[0]}, permutations ${perm_job[1]}-${perm_job[1] + perm_job[2] - 1}"
     label 'process_medium'
     label 'process_long'
 
@@ -120,7 +121,7 @@ process CCQTL_PERMUTE {
     input:
         path(analysis_files)
         path(plink_dir)
-        each chrom
+        each perm_job       // [chromosome, first permutation, number of permutations]
 
     output:
         path("perm/*"), emit: perm
@@ -129,10 +130,11 @@ process CCQTL_PERMUTE {
         """
         ccqtl_map.py \\
             --pgen-prefix ${plink_dir}/plink_genotypes \\
-            --chrom ${chrom} \\
+            --chrom ${perm_job[0]} \\
             --analysis-dir . \\
             --maf ${params.maf} \\
-            --n-perm ${params.ccQTL.n_permutations} \\
+            --n-perm ${perm_job[2]} \\
+            --perm-start ${perm_job[1]} \\
             --seed ${params.ccQTL.permutation_seed} \\
             --threads ${task.cpus} \\
             --outdir .

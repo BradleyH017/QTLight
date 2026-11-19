@@ -15,10 +15,13 @@ Scan mode (--n-perm 0), outputs in --outdir:
 
 Permutation mode (--n-perm N > 0): each cell type is residualised on the covariates,
 samples are shuffled (one shuffle per permutation, shared by all cell types of an
-analysis so their correlation is kept), and the chromosome is rescanned. Outputs:
-  perm/<analysis>__chr<chrom>.perm_stats.tsv  per permutation x cell type: n_tests, lambda,
-                                              min_p, n_p_lt_1e-5, n_p_lt_5e-8
-  perm/<analysis>__chr<chrom>.perm_hist.tsv   -log10(p) histogram pooled over permutations
+analysis so their correlation is kept), and the chromosome is rescanned. Runs permutations
+--perm-start .. --perm-start + N - 1; permutation b always uses the shuffle seeded by
+(--seed, b), so splitting the permutations over several jobs gives the same results. Outputs:
+  perm/<analysis>__chr<chrom>__perm<first>-<last>.perm_stats.tsv  per permutation x cell type:
+                                              n_tests, lambda, min_p, n_p_lt_1e-5, n_p_lt_5e-8
+  perm/<analysis>__chr<chrom>__perm<first>-<last>.perm_hist.tsv   -log10(p) histogram pooled over
+                                              these permutations (the summary sums the files)
 """
 import argparse
 import glob
@@ -49,7 +52,8 @@ def parse_args():
     p.add_argument("--chunk-size", type=int, default=100000, help="Variants read per chunk")
     p.add_argument("--batch-size", type=int, default=20000, help="map_trans batch size")
     p.add_argument("--lookup-variants", default="", help="Comma-separated variant IDs to report separately")
-    p.add_argument("--n-perm", type=int, default=0)
+    p.add_argument("--n-perm", type=int, default=0, help="Number of permutations to run in this job")
+    p.add_argument("--perm-start", type=int, default=1, help="Number of the first permutation (for split jobs)")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--threads", type=int, default=1)
     p.add_argument("--outdir", default=".")
@@ -253,14 +257,14 @@ def permute(args, variants, dosages, analyses, map_trans, chrom_label):
     start0 = variants["idx"].iloc[0]
     g_all = dosages.read(start0, start0 + len(variants))
     log(f"chr{chrom_label}: loaded {g_all.shape[0]:,} variants for {args.n_perm} permutations")
+    perms = range(args.perm_start, args.perm_start + args.n_perm)
     for name, (ph, cov) in analyses.items():
-        rng = np.random.default_rng(args.seed)
         g, keep = impute_and_filter(g_all[:, [dosages.samples.index(s) for s in ph.columns]], args.maf)
         gdf = pd.DataFrame(g[keep], index=variants.loc[keep, "variant_id"].values, columns=ph.columns)
         resid = residualise(ph, cov)
         stats_rows, hists = [], {ct: np.zeros(len(HIST_EDGES) - 1, dtype=np.int64) for ct in ph.index}
-        for b in range(1, args.n_perm + 1):
-            perm = rng.permutation(ph.shape[1])
+        for i, b in enumerate(perms, 1):
+            perm = np.random.default_rng([args.seed, b]).permutation(ph.shape[1])
             ph_perm = pd.DataFrame(resid.values[:, perm], index=ph.index, columns=ph.columns)
             res = map_trans(gdf, ph_perm, cov, args.batch_size)
             for ct, r in res.groupby("phenotype_id", sort=False):
@@ -271,9 +275,9 @@ def permute(args, variants, dosages, analyses, map_trans, chrom_label):
                                    "min_p": p.min(), "n_p_lt_1e-5": int((p < 1e-5).sum()),
                                    "n_p_lt_5e-8": int((p < 5e-8).sum())})
                 hists[ct] += hist_counts(p)
-            if b % 10 == 0 or b == args.n_perm:
-                log(f"{name}: {b} / {args.n_perm} permutations")
-        stem = os.path.join(args.outdir, "perm", f"{name}__chr{chrom_label}")
+            if i % 10 == 0 or i == args.n_perm:
+                log(f"{name}: {i} / {args.n_perm} permutations (permutation {b})")
+        stem = os.path.join(args.outdir, "perm", f"{name}__chr{chrom_label}__perm{perms[0]}-{perms[-1]}")
         pd.DataFrame(stats_rows).to_csv(stem + ".perm_stats.tsv", sep="\t", index=False, float_format="%.6g")
         hist_table(hists, {"n_perm": args.n_perm, "chrom": chrom_label, "analysis": name}).to_csv(
             stem + ".perm_hist.tsv", sep="\t", index=False)
